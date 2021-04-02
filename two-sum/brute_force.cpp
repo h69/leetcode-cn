@@ -2,10 +2,6 @@
 #include <vector>
 
 using namespace std;
-
-// Time complexity  : O(n^2)
-// Space complexity : O(1)
-
 class Solution {
 public:
   vector<int> twoSum(vector<int>& nums, int target) {
