@@ -60,7 +60,7 @@ public:
 
 int main() {
   ListNode* l1 = new ListNode();
-  l1->val = 0;
+  l1->val = 9;
   l1->next = new ListNode();
   l1->next->val = 9;
   l1->next->next = new ListNode();
