@@ -10,12 +10,14 @@ public:
     vector<int> results;
 
     unordered_map<int, int> hashTable;
+
     for (int i = 0; i < nums.size(); i++) {
       if (hashTable.find(target - nums[i]) != hashTable.end()) {
         results.push_back(hashTable[target - nums[i]]);
         results.push_back(i);
         return results;
       }
+
       hashTable[nums[i]] = i;
     }
 
