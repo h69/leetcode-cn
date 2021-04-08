@@ -8,17 +8,16 @@ public:
     int result = 0;
 
     for (int i = 0; i < s.length(); i++) {
-      int t = 1;
-
-      for (int j = i + 1; j < s.length(); j++) {
-        if (s.substr(i, j - i).find(s[j]) != string::npos) {
+      string substr;
+      for (int j = i; j < s.length(); j++) {
+        substr = s.substr(i, j - i + 1);
+        if (substr.find(s[j + 1]) != string::npos) {
           break;
         }
-        t++;
       }
 
-      if (t > result) {
-        result = t;
+      if (substr.length() > result) {
+        result = substr.length();
       }
     }
 
